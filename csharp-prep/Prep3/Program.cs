@@ -5,9 +5,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("Enter a number: ");
-        string stringNumber = Console.ReadLine();
-        int number = int.Parse(stringNumber);
+        // Console.Write("Enter a number: ");
+        // string stringNumber = Console.ReadLine();
+        // int number = int.Parse(stringNumber);
+        Random randomGenerator = new Random();
+        int number = randomGenerator.Next(1, 100);
 
         int guess = 999999;
         do
