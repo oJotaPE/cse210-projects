@@ -6,14 +6,10 @@ class Program
     {
         List<int> numbers = new List<int>();
 
-        // int inputnumber = 99999917;
-        // int total = 0;
-        // int max = 0;
-        // int min = 99999900;
-        int inputnumber;
+        int inputnumber = 99999917;
         int total = 0;
-        int max = int.MinValue;
-        int min = int.MaxValue;
+        int max = 0;
+        int min = 99999900;
         do
         {
             Console.Write("Enter a number to the list, type '0' to stop: ");
@@ -30,29 +26,14 @@ class Program
         int listSize = numbers.Count;
         Console.WriteLine("numbers in the list:");
 
-        // foreach(int number in numbers)
-        // {
-        //     total = total + number;
-        //     Console.WriteLine(number);
-        //     if (number > max)
-        //     {
-        //         max = number;
-        //     }
-        //     if (number < min)
-        //     {
-        //         min = number;
-        //     }
-        // }
-        foreach (int number in numbers)
+        foreach(int number in numbers)
         {
-            total += number;
+            total = total + number;
             Console.WriteLine(number);
-
             if (number > max)
             {
                 max = number;
             }
-
             if (number < min)
             {
                 min = number;
