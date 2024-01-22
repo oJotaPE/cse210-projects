@@ -6,32 +6,41 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Console.WriteLine("Hello Develop02 World!");
-        // Entry entry = new Entry();
-        // entry.NewEntry();
+        //Setting the variable responsible for menu
         string showItAll = "0";
+
+        //invoking other classes to create instances
         Entry entry = new Entry();
         Display display = new Display();
         Quit quitProgram = new Quit();
-        
-        do
+
+        do //until the user presses 5
         {
+            //present menu 
             Menu startMenu = new Menu();
             showItAll = startMenu.DisplayMenu();
+
+            //type a new entry
             if (showItAll == "1")
             {
                 
                 entry.NewEntry();
             }
+
+            //display on screen
             else if (showItAll == "2")
             {
                
                 display._DisplayCurrent(entry.answers);
             }
+
+            //load from other file
             else if (showItAll == "3")
             {
 
             }
+
+            //save on a file
             else if (showItAll == "4")
             {
                 Console.WriteLine("Choose one of the following:");
@@ -45,6 +54,8 @@ class Program
 
                 }
             }
+
+            //quit program
             else if (showItAll == "5")
             {
                 
