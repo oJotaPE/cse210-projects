@@ -18,6 +18,9 @@ class Program
             {
                 Menu typeEntry = new Menu();
                 typeEntry.WriteJournal();
+
+                // Entry showOnScreen = new Entry();
+                // showOnScreen._makeAVariable();
             }
             else if (showItAll == "2")
             {

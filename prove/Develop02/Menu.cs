@@ -19,7 +19,9 @@ public class Menu
     public string WriteJournal()
     {
         Entry newDescription = new Entry();
-        string oneMoreEntry = newDescription.NewEntry();
-        return oneMoreEntry;
+        // (string answer, DateTime entryDateTime) = newDescription.NewEntry();
+        string answer = newDescription.NewEntry();
+        return answer;
+
     }
 }

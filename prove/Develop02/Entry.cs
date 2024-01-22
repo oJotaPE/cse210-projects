@@ -1,6 +1,12 @@
+using System.Reflection.Metadata;
+
 public class Entry
 {
-    
+    public List<string> answers = new List<string>
+    {
+
+    };
+
     string entryBackup = "";
     //create a prompting list
     public List<string> prompts = new List<string>
@@ -23,22 +29,36 @@ public class Entry
         return prompts[index];
     }
 
-    public (string Answer, DateTime EntryDateTime) NewEntry()
-    {
-        Console.WriteLine(ChooseRandomPrompt());
+    // public (string Answer, DateTime EntryDateTime) NewEntry()
+    public string NewEntry()
+    {   string question = ChooseRandomPrompt();
+        Console.WriteLine(question);
         Console.Write("> ");
         string answer = Console.ReadLine();
 
         DateTime currentDate = DateTime.Now;
-        return (answer, DateTime.Now);
-    }
+        string entryData = $"\n\n {currentDate} - {question} \n{answer}\n\n";
 
-
-
-    public string _makeAVariable()
-    {
-        string question = ChooseRandomPrompt();
-        string answer = NewEntry();
-
+        //testing if the concatenation and formatting works
+        // Console.WriteLine(entryData);
+        answers.Add(entryData);
+        return entryData;
     }
 }
+
+
+
+//     public string _makeAVariable()
+//     {
+//         var entryResult = NewEntry();
+//         string answer = entryResult.Answer;
+//         DateTime entryDateTimeDT = entryResult.EntryDateTime;
+//         string DateTime = entryDateTimeDT.ToString();
+        
+//         string question = ChooseRandomPrompt();
+
+//         string entryData = $"\n\n {DateTime} - {question} \n{answer}\n\n";
+//         Console.WriteLine(entryData);
+//         return entryData;
+//     }
+// }
