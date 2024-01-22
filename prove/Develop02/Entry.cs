@@ -1,5 +1,7 @@
 public class Entry
 {
+    
+    string entryBackup = "";
     //create a prompting list
     public List<string> prompts = new List<string>
     {
@@ -21,11 +23,22 @@ public class Entry
         return prompts[index];
     }
 
-    public string NewEntry()
+    public (string Answer, DateTime EntryDateTime) NewEntry()
     {
         Console.WriteLine(ChooseRandomPrompt());
         Console.Write("> ");
         string answer = Console.ReadLine();
-        return answer;
+
+        DateTime currentDate = DateTime.Now;
+        return (answer, DateTime.Now);
+    }
+
+
+
+    public string _makeAVariable()
+    {
+        string question = ChooseRandomPrompt();
+        string answer = NewEntry();
+
     }
 }

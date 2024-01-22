@@ -37,8 +37,7 @@ class Program
 
                 if (SaveOptions == "1")
                 {
-                    Save saveJournal = new Save();
-                    saveJournal.CreateFile();
+
                 }
             }
             else if (showItAll == "5")
