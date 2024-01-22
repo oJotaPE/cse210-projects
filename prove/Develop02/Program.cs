@@ -10,21 +10,23 @@ class Program
         // Entry entry = new Entry();
         // entry.NewEntry();
         string showItAll = "0";
+        Entry entry = new Entry();
+        Display display = new Display();
+        Quit quitProgram = new Quit();
+        
         do
         {
             Menu startMenu = new Menu();
             showItAll = startMenu.DisplayMenu();
             if (showItAll == "1")
             {
-                Menu typeEntry = new Menu();
-                typeEntry.WriteJournal();
-
-                // Entry showOnScreen = new Entry();
-                // showOnScreen._makeAVariable();
+                
+                entry.NewEntry();
             }
             else if (showItAll == "2")
             {
-
+               
+                display._DisplayCurrent(entry.answers);
             }
             else if (showItAll == "3")
             {
@@ -45,7 +47,7 @@ class Program
             }
             else if (showItAll == "5")
             {
-                Quit quitProgram = new Quit();
+                
                 quitProgram._thankUser();
             }
         } while(showItAll != "5");

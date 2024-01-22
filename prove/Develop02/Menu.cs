@@ -16,12 +16,11 @@ public class Menu
         return choice;
     }
 
-    public string WriteJournal()
-    {
-        Entry newDescription = new Entry();
-        // (string answer, DateTime entryDateTime) = newDescription.NewEntry();
-        string answer = newDescription.NewEntry();
-        return answer;
 
+
+    public void DisplayJournal(List<string> answerList)
+    {
+        Display display = new Display();
+        display._DisplayCurrent(answerList);
     }
 }
