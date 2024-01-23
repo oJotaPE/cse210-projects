@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
 using System.IO;
+using System.IO.Enumeration;
 
 class Program
 {
@@ -17,6 +18,7 @@ class Program
         Entry entry = new Entry();
         Display display = new Display();
         Menu save = new Menu();
+        Load load = new Load();
         Quit quitProgram = new Quit();
 
         do //until the user presses 5
@@ -42,7 +44,9 @@ class Program
             //load from other file
             else if (showItAll == "3")
             {
-
+                Console.WriteLine("Enter the name of the file to be loaded, no extentions or folders: ");
+                string name = Console.ReadLine();
+                load._loadTheFile(name);
             }
 
             //save on a file

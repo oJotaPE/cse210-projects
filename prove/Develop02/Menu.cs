@@ -26,18 +26,6 @@ public class Menu
         display._DisplayCurrent(answerList);
     }
 
-    // public void _SaveJournal(List<string> answerList)
-    // {
-    //     Console.Write("Enter the file name: ");
-    //     string filename = Console.ReadLine();
-
-    //     string filepath = "C:\\Users\\Usuario\\Documents\\João Pedro\\software - dev\repositories\\cse210 - projects\\prove\\Develop02" + filename + ".txt";
-    //     Save saveFile = new Save();
-    //     saveFile._saveToFile(answerList, filepath);
-
-    //     Console.WriteLine("Journal Saved Succesfully!");
-
-    // }
     public void _SaveJournal(List<string> answerList)
     {
         Save saveToFile = new Save();
@@ -52,24 +40,30 @@ public class Menu
 
         if (choice == "1")
         {
-            Console.Write("Enter the file name: ");
+            Console.Write("Enter the file name, no extensions or folders:  ");
             fileName = Console.ReadLine();
             fileName = "C:\\Users\\Usuario\\Documents\\João Pedro\\software-dev\\repositories\\cse210-projects\\prove\\Develop02\\" + fileName + ".txt";
             saveToFile._saveToFile(answerList, fileName);
         }
         else if (choice == "2")
         {
-            Console.Write("Enter the loaded file name: ");
+            Console.Write("Enter the loaded file name, no extensions or folders  : ");
             fileName = Console.ReadLine();
             fileName = "C:\\Users\\Usuario\\Documents\\João Pedro\\software-dev\\repositories\\cse210-projects\\prove\\Develop02\\" + fileName + ".txt";
             saveToFile._appendToFile(answerList, fileName);
+        }
+        else if (choice == "3")
+        {
+            Console.WriteLine("Enter the name of the file to be loaded, no extentions or folders: ");
+            string name = Console.ReadLine();
+            Load load = new Load();
+            load._loadTheFile(name);
+            
         }
         else
         {
             Console.WriteLine("Invalid choice.");
             return;
         }
-
-        
     }
 }
