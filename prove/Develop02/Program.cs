@@ -1,3 +1,6 @@
+//I exceed what's expected because in my program, when saving the changes, I give the user the oportunity to save
+//the new entries in an already existing file, just typing the name of the file
+
 using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
