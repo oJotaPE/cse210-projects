@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
+using System.IO;
 
 class Program
 {
@@ -12,6 +13,7 @@ class Program
         //invoking other classes to create instances
         Entry entry = new Entry();
         Display display = new Display();
+        Menu save = new Menu();
         Quit quitProgram = new Quit();
 
         do //until the user presses 5
@@ -43,16 +45,7 @@ class Program
             //save on a file
             else if (showItAll == "4")
             {
-                Console.WriteLine("Choose one of the following:");
-                Console.WriteLine("1. Create new file");
-                Console.WriteLine("2. Save on loaded file");
-                Console.Write(">");
-                string SaveOptions = Console.ReadLine();
-
-                if (SaveOptions == "1")
-                {
-
-                }
+                save._SaveJournal(entry.answers);
             }
 
             //quit program

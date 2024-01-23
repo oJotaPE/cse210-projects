@@ -7,7 +7,6 @@ public class Entry
 
     };
 
-    string entryBackup = "";
     //create a prompting list
     public List<string> prompts = new List<string>
     {
@@ -37,28 +36,10 @@ public class Entry
         string answer = Console.ReadLine();
 
         DateTime currentDate = DateTime.Now;
-        string entryData = $"\n\n {currentDate} - {question} \n{answer}\n\n";
+        string entryData = $"\n {currentDate} - {question} \n{answer}\n";
 
         //testing if the concatenation and formatting works
-        // Console.WriteLine(entryData);
         answers.Add(entryData);
         return entryData;
     }
 }
-
-
-
-//     public string _makeAVariable()
-//     {
-//         var entryResult = NewEntry();
-//         string answer = entryResult.Answer;
-//         DateTime entryDateTimeDT = entryResult.EntryDateTime;
-//         string DateTime = entryDateTimeDT.ToString();
-        
-//         string question = ChooseRandomPrompt();
-
-//         string entryData = $"\n\n {DateTime} - {question} \n{answer}\n\n";
-//         Console.WriteLine(entryData);
-//         return entryData;
-//     }
-// }

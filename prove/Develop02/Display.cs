@@ -6,8 +6,6 @@ public class Display
         foreach (string entry in answerList)
         {
             Console.WriteLine(entry);
-            teste = teste + 1;
-            Console.WriteLine(teste);
         }
 
     }
