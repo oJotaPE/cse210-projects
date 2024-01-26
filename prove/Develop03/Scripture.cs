@@ -47,9 +47,10 @@ public class Scripture
             //very if the word is hidden
             if (word.IsHidden()) //PRECISA CONFIRMAR ESSE IS HIDDEN
             {
-                displayText.Append("_be_______" );
+                displayText.Append(word.GetDisplayText());
             }
             else 
+            {
             // {   if it's not hidden, just add the real text
                 displayText.Append(word.GetDisplayText() + " "); // CRIAR ESSE GET DISPLAY TEXT
             }
@@ -62,9 +63,9 @@ public class Scripture
     {
         foreach (Word word in _words)
         {
-            if(!word.isHidden())
+            if(!word.IsHidden())
             {
-                return false
+                return false;
             }   
         }
         return true;
