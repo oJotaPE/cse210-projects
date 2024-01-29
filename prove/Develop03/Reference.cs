@@ -1,4 +1,45 @@
-public class Reference 
+// using System.ComponentModel.DataAnnotations;
+
+// public class Reference 
+// {
+//     private string _book;
+//     private int _chapter;
+//     private int _verse;
+//     private int _endVerse;
+
+//     public Reference(string book, int chapter, int verse)
+//     {
+//         _book = book;
+//         _chapter = chapter;
+//         _verse = verse;
+//         _endVerse = 0;
+//     }
+
+//     public Reference(string book, int chapter, int verse, int endVerse)
+//     {
+//         _book = book;
+//         _chapter = chapter;
+//         _verse = verse;
+//         _endVerse = endVerse;
+//     }
+//     string showOnScreen;
+//     public string GetDisplayText()
+//     {
+//         if (_endVerse == 0)
+//         {
+//             showOnScreen = $"{_book} {_chapter}:{_verse} ";
+//         }
+//         else
+//         {
+//             showOnScreen = $"{_book} {_chapter}:{_verse}-{_endVerse} ";
+//         }
+
+//         return showOnScreen;
+
+//     }
+
+// }
+public class Reference
 {
     private string _book;
     private int _chapter;
@@ -10,6 +51,7 @@ public class Reference
         _book = book;
         _chapter = chapter;
         _verse = verse;
+        _endVerse = 0;
     }
 
     public Reference(string book, int chapter, int verse, int endVerse)
@@ -22,7 +64,6 @@ public class Reference
 
     public string GetDisplayText()
     {
-
+        return _endVerse == 0 ? $"{_book} {_chapter}:{_verse} " : $"{_book} {_chapter}:{_verse}-{_endVerse} ";
     }
-
 }
