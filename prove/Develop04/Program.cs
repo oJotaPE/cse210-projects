@@ -1,16 +1,26 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Activity teste = new Activity();
+        // Creating instances
         BreathingActivity breathingActivity = new BreathingActivity();
+        ReflectingActivity reflectingActivity = new ReflectingActivity();
 
-        Console.WriteLine("Menu Options:");
-        Console.WriteLine("\n   1. Start breathing activity\n   2. Start Reflecting activity\n   3. Start listing activity\n   4. Quit");
-        Console.Write("\nEnter the choice: ");
-        string choice = Console.ReadLine();
+        //Display menu
+        string choice = "12";
+        void menu()
+        {
+            Console.Clear();
+            Console.WriteLine("Menu Options:");
+            Console.WriteLine("\n   1. Start breathing activity\n   2. Start Reflecting activity\n   3. Start listing activity\n   4. Quit");
+            Console.Write("\nEnter the choice: ");
+            choice = Console.ReadLine();
+        };
+        menu();
+
 
         if(choice == "4")
         {
@@ -27,6 +37,20 @@ class Program
             breathingActivity.Run();
             Console.WriteLine();
             breathingActivity.DisplayEndingMessage();
+            menu();
+        }
+        if (choice == "2")
+        {
+            Console.Clear();
+            reflectingActivity.ShowSpinner(200, 2);
+            reflectingActivity.DisplayStartingMessage();
+            Console.WriteLine();
+            reflectingActivity.Run();
+            Console.WriteLine();
+            reflectingActivity.DisplayEndingMessage();
+            reflectingActivity.ShowSpinner(200, 2);
+            menu();
+
         }
     }
 }

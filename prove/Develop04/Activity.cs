@@ -37,7 +37,7 @@ public class Activity
     public void ShowSpinner(int seconds, int timeSpinning)
     {
         int timerSeconds = timeSpinning;
-        Console.Write("\\");
+        // Console.Write("\\");
         do
         {
             Thread.Sleep(seconds);
@@ -64,6 +64,7 @@ public class Activity
             Thread.Sleep(seconds);
             Console.Write("\b \b");
             Console.Write("\\");
+            Console.Write("\b \b");
 
             timerSeconds = timerSeconds - 1;
         } while (timerSeconds > -1);
