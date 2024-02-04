@@ -16,7 +16,7 @@ public class BreathingActivity : Activity
         do
         {
             Console.Write("\n\nbreathe in...");
-            ShowCountDoun(5);
+            ShowCountDoun(7);
             Console.Write("\nBreathe out...");
             ShowCountDoun(5);
             time = time + 12;

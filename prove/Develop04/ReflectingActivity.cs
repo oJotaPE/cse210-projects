@@ -41,6 +41,7 @@ public class ReflectingActivity : Activity
     public string GetRandomQuestion()
     {
         int index = random.Next(_questions.Count);
+        _questions.Remove(_questions[index]);
         return _questions[index];
     }
 
@@ -69,12 +70,13 @@ public class ReflectingActivity : Activity
         DisplayPrompt();
         Console.WriteLine("After you have something in mind, press enter to continue.");
         string toContinue = Console.ReadLine();
-        if (toContinue == "") ;
+        if (toContinue == "") 
         {
             Console.WriteLine("Now, ponder on each of the following questions as they related to this experiende.");
             Console.Write($"you may begin in: ");
             ShowCountDoun(5);
             
+            Console.WriteLine();
             DisplayQuestions();
         }
     }
