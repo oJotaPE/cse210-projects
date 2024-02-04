@@ -41,7 +41,7 @@ public class ReflectingActivity : Activity
     public string GetRandomQuestion()
     {
         int index = random.Next(_questions.Count);
-        _questions.Remove(_questions[index]);
+        // _questions.Remove(_questions[index]);
         return _questions[index];
     }
 
