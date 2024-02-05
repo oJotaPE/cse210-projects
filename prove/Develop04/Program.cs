@@ -2,7 +2,7 @@ using System;
 using System.Security.Cryptography.X509Certificates;
 
 //exceeding requirements and creativity: 
-// In my reflecting activity, inside the get random questions, 
+// In my reflecting activity, inside the display random questions, 
 //to make the user reflect under the speciffic topic, I added a 
 //.remove() code to prevent the system from using the same question more than once
 

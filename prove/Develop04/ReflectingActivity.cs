@@ -41,7 +41,6 @@ public class ReflectingActivity : Activity
     public string GetRandomQuestion()
     {
         int index = random.Next(_questions.Count);
-        // _questions.Remove(_questions[index]);
         return _questions[index];
     }
 
@@ -58,6 +57,8 @@ public class ReflectingActivity : Activity
         do
         {
             Console.Write($"\n> {GetRandomQuestion()}\n");
+            _questions.Remove(GetRandomQuestion());
+
             ShowSpinner(200, 4);
             time = time + 9;
         } while(time <= _duration);
