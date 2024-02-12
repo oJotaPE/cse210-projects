@@ -16,20 +16,7 @@ public class CheckListGoal : Goal
         _target = target;
         _bonus = bonus;
     }
-    // public override void RecordEvent()
-    // {
-    //     Console.WriteLine("Enter the number of the goal you want to record: ");
-    //     string indexInput = Console.ReadLine();
-    //     int aIndex = int.Parse(indexInput);
-    //     int index = aIndex - 1;
-    //     GoalManager goalManager = new GoalManager();
-    //     List<Goal> list = goalManager.GetGoals();
-    //     if (index < list.Count && list[index] is CheckListGoal checkListGoal && checkListGoal.IsComplete())
-    //     {
-    //         _amountCompleted = _amountCompleted + 1;
-    //     }
 
-    // }
     public override void RecordEvent()
     {
         if (_amountCompleted < _target)

@@ -46,18 +46,7 @@ public class GoalManager
     {
         _goals.Add(newGoal);
     }
-    // public void RecordEvent()
-    // {
-    //     int Index = 0;
-    //     foreach (Goal goal in _goals)
-    //     {
-    //         Index = Index ++;
-    //         Console.WriteLine($"{Index}. {goal}");
-    //     }
-    //     Goal goal1 = new Goal();
-    //     goal1.RecordEvent();
 
-    // }
     public void RecordEvent()
     {
         Console.WriteLine("Select the goal number you want to record an event for:");
@@ -90,21 +79,7 @@ public class GoalManager
 
         Console.WriteLine($"Goals saved to {filename}");
     }
-    // public void LoadGoals()
-    // {
-    //     Console.Write("Enter the filename to save your goals, with the .txt extension: ");
-    //     string filename = Console.ReadLine();
-    //     string filePath = Path.Combine(@"C:\Users\Usuario\Documents\João Pedro\software-dev\repositories\cse210-projects\prove\Develop05", filename);
 
-    //     using (StreamReader load = new StreamReader(filePath))
-    //     {
-    //         string data;
-    //         while ((data = load.ReadLine()) != null)
-    //         {
-    //             Console.WriteLine(data);
-    //         }
-    //     }
-    // }
     public void LoadGoals()
     {
         Console.Write("Enter the filename to load your goals, with the .txt extension: ");
