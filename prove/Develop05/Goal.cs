@@ -12,11 +12,15 @@ public abstract class Goal
         _description = description;
         _points = points;
     }
-
-    public void RecordEvent()
+    public Goal()
     {
-        
+        _shortName = "-";
+        _description = "-";
+        _points = "-";
     }
+
+    public abstract void RecordEvent();
+
     public abstract bool IsComplete();
 
     public virtual string GetDetailsString()
@@ -26,6 +30,22 @@ public abstract class Goal
         {
             checkbox = "[X]";
         }
-        return $"{checkbox} {_shortName} ({_description}) - {_points} points";
+        string display =  $"{checkbox} {_shortName} ({_description}) - {_points} points";
+        return display;
+    }
+
+    public string GetShortName()
+    {
+        return _shortName;
+    }
+
+    public string GetDescription()
+    {
+        return _description;
+    }
+
+    public string GetPoints()
+    {
+        return _points;
     }
 }

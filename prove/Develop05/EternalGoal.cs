@@ -8,8 +8,24 @@ public class EternalGoal : Goal
         _shortName = name;
     }
 
-    public void RecordEvent()
+    // public override void RecordEvent()
+    // {
+    //     Console.WriteLine("Enter the number of the goal you want to record: ");
+    //     string indexInput = Console.ReadLine();
+    //     int aIndex = int.Parse(indexInput);
+    //     int index = aIndex - 1;
+    //     GoalManager goalManager = new GoalManager();
+    //     List<Goal> list = goalManager.GetGoals();
+
+    // }
+    public override void RecordEvent()
     {
+        Console.WriteLine("Enter the number of the goal you want to record: ");
+        string indexInput = Console.ReadLine();
+        int aIndex = int.Parse(indexInput);
+        int index = aIndex - 1;
+        GoalManager goalManager = new GoalManager();
+        List<Goal> list = goalManager.GetGoals();
 
     }
 
