@@ -1,9 +1,12 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation1 World!");
+        Create create = new Create();
+        
+        create.GenerateRandomVideo();
     }
 }
