@@ -34,6 +34,21 @@ public class Comment
         "historyenthusiast",
         "travellingfoodie",
         "mindfuldeveloper",
+        "photographylover",
+        "literaturelover",
+        "fashionicon",
+        "codingenthusiast",
+        "historybuff",
+        "culinaryexpert",
+        "mindfulnessguru",
+        "travelenthusiast",
+        "petcaregiver",
+        "gamingpro",
+        "artenthusiast",
+        "languageaficionado",
+        "healthandwellness",
+        "moviereviewer",
+        "naturelover"
     };
     List<string> userNumbers = new List<string>
     {
