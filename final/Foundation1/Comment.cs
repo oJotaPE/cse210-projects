@@ -163,6 +163,7 @@ public class Comment
         "Congratulations",
         "I'm surprised",
         "Didn't like it",
+        "#tellUsMore",
         "Great approach",
         "Got confused",
         "Sensational",
