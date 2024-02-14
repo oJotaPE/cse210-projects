@@ -29,7 +29,12 @@ public class Create
 
         comment01.SetUser();
         comment01.SetText();
-        comment01.Display();
+        comment01.SetComments();
+        foreach(string comment in comment01.getComments())
+        {
+            Console.WriteLine(comment);
+        }
+        
 
 
         Video video02 = new Video(); //2
@@ -42,7 +47,12 @@ public class Create
 
         comment02.SetUser();
         comment02.SetText();
-        comment02.Display();
+        comment02.SetComments();
+        foreach (string comment in comment02.getComments())
+        {
+            Console.WriteLine(comment);
+        }
+
 
         Video video03 = new Video(); //3
         Comment comment03 = new Comment();
@@ -54,7 +64,13 @@ public class Create
 
         comment03.SetUser();
         comment03.SetText();
-        comment03.Display();
+        comment03.SetComments();
+        foreach (string comment in comment03.getComments())
+        {
+            Console.WriteLine(comment);
+        }
+
+
         Video video04 = new Video(); //4
         Comment comment04 = new Comment();
 
@@ -65,6 +81,11 @@ public class Create
 
         comment04.SetUser();
         comment04.SetText();
-        comment04.Display();
+        comment04.SetComments();
+        foreach (string comment in comment04.getComments())
+        {
+            Console.WriteLine(comment);
+        }
+
     }
 }

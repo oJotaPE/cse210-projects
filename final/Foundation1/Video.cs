@@ -131,8 +131,9 @@ public class Video
     public void Display()
     {
         Console.WriteLine("______________________________________________");
-        Console.WriteLine($"\nTittle: {_tittle} \nAuthor: {_author} \nLength (seconds): {_length}\n");
-        Console.WriteLine("______________________________________________");
+        Console.WriteLine($"\nTittle: {_tittle} \nAuthor: {_author} \nLength (seconds): {_length}");
+        Console.WriteLine("______________________________________________\n");
+        
     }
 
 }

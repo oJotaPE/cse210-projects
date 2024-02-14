@@ -3,6 +3,8 @@ public class Comment
     private string _user;
     private string _text;
 
+    private List<string> _comments;
+
     //lists to generate users
     List<string> userNames = new List<string>
     {
@@ -162,6 +164,13 @@ public class Comment
 
     Random random = new Random();
 
+    public Comment()
+    {
+        _text = "None";
+        _user = "unknown";
+        _comments = new List<string>();
+    }
+
     public void SetUser()
     {
         int nameIndex = random.Next(0, userNames.Count);
@@ -183,7 +192,7 @@ public class Comment
         if (simpleOrComplex < 1)
         {
             int expressionIndex = random.Next(0, expressions.Count);
-            comment = expressions[expressionIndex];
+            comment = $"\n   {expressions[expressionIndex]}";
         }
         else
         {
@@ -191,7 +200,7 @@ public class Comment
             int argumentIndex = random.Next(0, genericFeedback.Count);
             int conclusionIndex = random.Next(0, conclusions.Count);
 
-            comment = $"   {introductions[introductionIndex]} {genericFeedback[argumentIndex]} {conclusions[conclusionIndex]}";;
+            comment = $"\n   {introductions[introductionIndex]} {genericFeedback[argumentIndex]} {conclusions[conclusionIndex]}";;
         }
         _text = comment;
     }
@@ -201,10 +210,25 @@ public class Comment
         return _text;
     }
 
-    public void Display()
+    public void SetComments()
     {
-        Console.WriteLine($"{GetUser()}:");
-        Console.WriteLine(GetText());
+        int commentsAmmount = 4;
+        _comments.Clear();
+
+        for (int i = 0; i < commentsAmmount; i++)
+        {
+            SetUser();
+            SetText();
+                        
+            _comments.Add(GetUser());
+            _comments.Add(GetText());
+            _comments.Add("----");
+        }
+    }
+
+    public List<string> getComments()
+    {
+        return _comments;
     }
 
 }
