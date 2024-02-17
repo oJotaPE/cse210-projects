@@ -463,10 +463,6 @@ public class Address
     //in case no info is given, I have now base values.
     public Address(Random random)
     {
-        // _city = "None";
-        // _country = "United States";
-        // _state = "None";
-        // _street = "None";
         _city = cities[random.Next(0, cities.Count)];
         _country = countries[random.Next(0, countries.Count)];
         _state = states[random.Next(0, states.Count)];
@@ -524,7 +520,7 @@ public class Address
         return lives;
     }
 
-    public string MakeAdress()
+    public string MakeAddress()
     {
         return $"adress: \n{_street}, {_city} \n{_state} \n{_country}";
         //return a label with all the fields of the address

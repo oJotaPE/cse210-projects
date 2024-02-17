@@ -49,29 +49,7 @@ public class Product
             8.49
         };
 
-    //constructor
-    // public Product()
-    // {
-    //     _id = "none";
-    //     _name = "none";
-    //     _price = 0;
-    //     _quantity = 0;
-    //     _totalCost = 0;
-    // }
-
-    // Random random = new Random();
-
-    // public void InitializeRandomProduct()
-    // {
-    //     int randomIndex = random.Next(0, products.Count);
-    //     int randomQuantity = random.Next(1, 15);
-    //     _name = products[randomIndex];
-    //     _id = productIds[randomIndex];
-    //     _price = prices[randomIndex];
-    //     _quantity = randomQuantity;
-    //     _totalCost = _price * _quantity;
-    // }
-    // Constructor
+    // constructor
     public Product(Random random)
     {
         InitializeRandomProduct(random);

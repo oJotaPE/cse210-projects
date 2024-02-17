@@ -71,7 +71,7 @@ public class Order
         Address address = new Address(random);
         // StringBuilder label = new StringBuilder();
         // label.AppendLine($"Shipping Label for {_customer}: ");
-        Console.WriteLine(address.MakeAdress());
+        Console.WriteLine(address.MakeAddress());
         
         //  return label.ToString();
     }

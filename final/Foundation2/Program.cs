@@ -35,8 +35,8 @@ class Program
         string state2 = address2.GetState();
         string country2 = address2.GetCountry();
 
-        string AddressString1 = address1.MakeAdress();
-        string addressString2 = address2.MakeAdress();
+        string AddressString1 = address1.MakeAddress();
+        string addressString2 = address2.MakeAddress();
 
         // Console.WriteLine(AddressString1);
         // Console.WriteLine("\n------\n");
