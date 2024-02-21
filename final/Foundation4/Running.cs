@@ -10,10 +10,6 @@ public class Running : Activity
         _speed = (double)60 / _pace;
     }
 
-    // public override int CalculateDistance()
-    // {
-    //     return _distance;
-    // }
     public override string AddSummary()
     {
         DateTime date = DateTime.Now.Date; //.Date will get only the date information instead of current date and time
@@ -23,7 +19,6 @@ public class Running : Activity
         string stringDistance = _distance.ToString();
 
         string data = $"-  {date:dd/MM/yyyy} Running ({stringTime}) - Distance: {stringDistance} km, Speed: {stringSpeed} kph, Pace: {stringPace} min per KM)";
-        // _summary.Add(data);
         return data;
     }
 

@@ -13,12 +13,7 @@ public class Swimming : Activity
 
     }
 
-    // public override int CalculateDistance()
-    // {
-    //     int calculation = _laps * 50 / 100;
-    //     int _distance = calculation;
-    //     return calculation;
-    // }
+
 
     public override string AddSummary()
     {
@@ -29,7 +24,6 @@ public class Swimming : Activity
         string stringDistance = _distance.ToString();
 
         string data = $"-  {date:dd/MM/yyyy} Swimming ({stringTime}) - Distance: {stringDistance} Km, Speed: {stringSpeed} kph, Pace: {stringPace} min per KM)";
-        // _summary.Add(data);
         return data;
     }
 

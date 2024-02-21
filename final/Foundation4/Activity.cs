@@ -22,9 +22,4 @@ public class Activity
         string data = $"-  {date:dd/MM/yyyy} Exercise ({stringTime}) - Distance: {stringDistance}, Speed: {stringSpeed} kph, Pace: {stringPace} per KM)";
         return data;
     }
-
-    public List<string> GetSummary()
-    {
-        return _summary;
-    }
 } 
