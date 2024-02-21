@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
 
         Address address1 = new Address();
         Address address2 = new Address();

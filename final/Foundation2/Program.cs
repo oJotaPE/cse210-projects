@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
 
         Random random = new Random();
         Address address1 = new Address(random);

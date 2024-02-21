@@ -1,16 +1,18 @@
 public class Cycling : Activity
 {    
-    public Cycling(int speed, int time)
+    public Cycling(double speed, int time)
     {
         _speed = speed;
         _time = time;
+        _distance = (int)((double)_time *_speed);
+        _pace = (double)_time / _distance;
     }
-    public override int CalculateDistance()
-    {
-        int calculation = _time * _speed;
-        _distance = calculation;
-        return calculation;
-    }
+    // public override int CalculateDistance()
+    // {
+    //     int calculation = 
+    //      = calculation;
+    //     return calculation;
+    // }
 
     public override string AddSummary()
     {
@@ -20,7 +22,7 @@ public class Cycling : Activity
         string stringPace = string.Format("{0:0.00}", _pace);//limit pace to 2 decimal points
         string stringDistance = _distance.ToString();
 
-        string data = $"-  {date:dd/MM/yyyy} Cycling ({stringTime}) - Distance: {stringDistance}, Speed: {stringSpeed} kph, Pace: {stringPace} per KM)";
+        string data = $"-  {date:dd/MM/yyyy} Cycling ({stringTime}) - Distance: {stringDistance} km, Speed: {stringSpeed} kph, Pace: {stringPace} min per KM)";
         // _summary.Add(data);
         return data;
     }

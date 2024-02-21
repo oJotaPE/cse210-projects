@@ -1,30 +1,14 @@
-public abstract class Activity
+public class Activity
 {
-    protected int _distance;
-    protected int _speed;
-    protected double _pace;
-    protected int _time;//always in minutes
+    protected int _distance; //always in kilometers
+    protected double _speed; //always in km/h
+    protected double _pace; //minutes per kilometer
+    protected int _time; //always in minutes
     protected List<string> _summary; //set the list as an attribute
     
     public Activity()
     {
         _summary = new List<string>(); //start the summary 
-    }
-
-    public abstract int CalculateDistance();
-
-    public int CalculateSpeed()
-    {
-        int calculation = (_distance / _time) * 60;
-        _speed = calculation;
-        return calculation;
-
-    }
-    public double CalculatePace()
-    {
-        double calculation = (double)_time / _distance;
-        _pace = calculation;
-        return calculation;
     }
 
     public virtual string AddSummary()

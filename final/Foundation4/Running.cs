@@ -6,12 +6,14 @@ public class Running : Activity
     {
         _distance = distance;
         _time = time;
+        _pace = (double)_time / _distance;
+        _speed = (double)60 / _pace;
     }
 
-    public override int CalculateDistance()
-    {
-        return _distance;
-    }
+    // public override int CalculateDistance()
+    // {
+    //     return _distance;
+    // }
     public override string AddSummary()
     {
         DateTime date = DateTime.Now.Date; //.Date will get only the date information instead of current date and time
@@ -20,7 +22,7 @@ public class Running : Activity
         string stringPace = string.Format("{0:0.00}", _pace);//limit pace to 2 decimal points
         string stringDistance = _distance.ToString();
 
-        string data = $"-  {date:dd/MM/yyyy} Running ({stringTime}) - Distance: {stringDistance}, Speed: {stringSpeed} kph, Pace: {stringPace} per KM)";
+        string data = $"-  {date:dd/MM/yyyy} Running ({stringTime}) - Distance: {stringDistance} km, Speed: {stringSpeed} kph, Pace: {stringPace} min per KM)";
         // _summary.Add(data);
         return data;
     }
